@@ -251,7 +251,10 @@ var hostname string = "ibm.sdr"
 var gpshostname string = "ibm.gps"
 
 func main() {
-	alt_addr := os.Getenv("RTLSDR_ADDR")
+	// take f
+	//alt_addr := os.Getenv("RTLSDR_ADDR")h
+
+	alt_addr := os.Args[0]
 	// if no alternative address is set, use the default.
 	if alt_addr != "" {
 		fmt.Println("connecting to remote rtlsdr:", alt_addr)
